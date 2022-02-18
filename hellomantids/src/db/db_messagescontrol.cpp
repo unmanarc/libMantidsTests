@@ -46,7 +46,7 @@ json DB::removeMessage(Manager *auth, Session *sess, const json &payload)
     Mantids::Threads::Sync::Lock_RW lock(mutex);
     std::string lastSQLError;
 
-    Globals::getAppLog()->log0(__func__,Logs::LEVEL_INFO, "User '%s' is removing node '%lu", sess->getAuthUser().c_str(),postId);
+    Globals::getAppLog()->log0(__func__,Logs::LEVEL_INFO, "User '%s' is removing node '%lu'", sess->getAuthUser().c_str(),postId);
 
     if (!db.query(&lastSQLError,"DELETE FROM posts WHERE `id`=:id;",
                                 {
