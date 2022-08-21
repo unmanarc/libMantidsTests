@@ -150,6 +150,7 @@ public:
         Globals::getLoginRPCClient()->setRemoteHost(Globals::getLC_LoginRPC_RemoteHost());
         Globals::getLoginRPCClient()->setRemotePort(Globals::getLC_LoginRPC_RemotePort());
         Globals::getLoginRPCClient()->setUseIPv6(Globals::getLC_LoginRPC_UseIPv6());
+        Globals::getLoginRPCClient()->setUsingTLSPSK(Globals::getLC_LoginRPC_UsePSK());
 
         // Database Location:
         std::string dbLocation = pRunningConfig.get<std::string>("Config.Location","/var/lib/hellomantids/console.db");
