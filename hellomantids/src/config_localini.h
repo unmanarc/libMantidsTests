@@ -58,12 +58,17 @@ public:
 
     static uint16_t getLC_LoginRPC_RemotePort()
     {
-        return pLocalConfig.get<uint16_t>("LoginRPCClient.RemotePort",30301);
+        return pLocalConfig.get<uint16_t>("LoginRPCClient.RemotePort",30302);
     }
 
     static bool getLC_LoginRPC_UseIPv6()
     {
         return pLocalConfig.get<bool>("LoginRPCClient.ipv6",false);
+    }
+
+    static bool getLC_LoginRPC_UsePSK()
+    {
+        return pLocalConfig.get<bool>("LoginRPCClient.UsePSK",true);
     }
 
     static uint16_t getLC_RPCServer_ListenPort()
