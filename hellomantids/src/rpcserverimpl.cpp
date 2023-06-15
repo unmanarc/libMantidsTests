@@ -106,7 +106,7 @@ bool RPCServerImpl::createRPCListener()
     }
 }
 
-json RPCServerImpl::getHelloWorldMessage(void *, const std::string &nodeName, const json &payload)
+json RPCServerImpl::getHelloWorldMessage(void *, const std::string &nodeName, const json &payload, void * cntObj, const std::string & cntData)
 {
     json r;
     LOG_APP->log0(__func__,Logs::LEVEL_ERR,  "Node '%s' requesting hello world with payload=%s...", nodeName.c_str(), payload.toStyledString().c_str());
@@ -135,7 +135,7 @@ void RPCServerImpl::_callbackOnTimeOut(void * obj, Socket_StreamBase *s, const c
     return;
 }
 
-json RPCServerImpl::_pingNotFound_(void *, const std::string &nodeName, const json &payload)
+json RPCServerImpl::_pingNotFound_(void *, const std::string &nodeName, const json &payload, void *cntObj, const string &cntData)
 {
     //LOG_APP->log0(__func__, Logs::LEVEL_INFO, "Received ping from node '%s'.",nodeName.c_str());
     return true;

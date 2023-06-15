@@ -12,8 +12,8 @@ public:
     RPCServerImpl();
     static bool createRPCListener();
 
-    static json getHelloWorldMessage(void *, const std::string &nodeName, const json &payload);
-    static json _pingNotFound_(void *, const std::string &nodeName, const json &payload);
+    static json getHelloWorldMessage(void *, const std::string &nodeName, const json &payload, void *cntObj, const std::string &cntData);
+    static json _pingNotFound_(void *, const std::string &nodeName, const json &payload, void * cntObj, const std::string & cntData);
 
 private:
     /**
