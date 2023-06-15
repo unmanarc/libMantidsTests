@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 ##############################################################################################################################
 # Vars and Versions:
-set(SVERSION 2.7.5)
+set(SVERSION 2.8.12)
 
 set(PROJECT_HOMEPAGE_URL "https://github.com/unmanarc/libMantidsTests")
 set(PROJECT_CONTACT "Aaron G. Mizrachi P. <aaron@unmanarc.com>")
@@ -30,5 +30,6 @@ include(GNUInstallDirs)
 #############################################################################################################################
 # Subprojects:
 ADD_SUBDIRECTORY(hellomantids)
+ADD_SUBDIRECTORY(cryptotest)
 
 #############################################################################################################################
